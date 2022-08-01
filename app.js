@@ -3,23 +3,24 @@ const btn = document.querySelector(".input button");
 const errorMsg = document.querySelector(".subscribeForm > p");
 const errorMsgMobile = document.querySelector(".input .mobile-error");
 const regEx = /[\w\-]+@\w+\.[A-Za-z]+/gi;
+const value = inputEmail.value;
 
 btn.addEventListener("click", () => {
-  if (regEx.test(inputEmail.value) === false) {
-    if (window.screen.width < 768) {
+  if (window.screen.width < 768) {
+    if (regEx.test(value)) {
+      inputEmail.style.border = "1px solid green";
+      errorMsgMobile.style.display = "none";
+    } else {
       inputEmail.style.border = "1px solid red";
       errorMsgMobile.style.display = "block";
+    }
+  } else {
+    if (regEx.test(value)) {
+      inputEmail.style.border = "1px solid green";
+      errorMsg.style.display = "none";
     } else {
       inputEmail.style.border = "1px solid red";
       errorMsg.style.display = "block";
-    }
-  } else {
-    if (window.screen.width < 768) {
-      inputEmail.style.border = "1px solid #aaa";
-      errorMsgMobile.style.display = "none";
-    } else {
-      inputEmail.style.border = "1px solid #aaa";
-      errorMsg.style.display = "none";
     }
   }
 });
