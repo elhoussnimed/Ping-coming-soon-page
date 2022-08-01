@@ -2,7 +2,7 @@ const inputEmail = document.querySelector(".input input");
 const btn = document.querySelector(".input button");
 const errorMsg = document.querySelector(".subscribeForm > p");
 const errorMsgMobile = document.querySelector(".input .mobile-error");
-const regEx = /[\w\-]+@\w\.[A-Za-z]+/gi;
+const regEx = /[\w\-]+@\w+\.[A-Za-z]+/gi;
 
 btn.addEventListener("click", () => {
   if (regEx.test(inputEmail.value) === false) {
