@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: hsl(223, 87%, 63%);
+  --light-blue-color: hsl(223, 100%, 88%);
+  --light-red-color: hsl(354, 100%, 66%);
+  --gray-color: hsl(0, 0%, 59%);
+  --dark-blue-color: hsl(209, 33%, 12%);
+}
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  height: 100vh;
+  padding-block: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  margin-bottom: 20px;
+}
+h1 {
+  color: var(--gray-color);
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+h1 span {
+  color: black;
+  font-weight: 600;
+}
+h5 {
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.subscribeForm {
+  width: 40%;
+  margin-bottom: 30px;
+}
+.input {
+  display: flex;
+  justify-content: space-between;
+}
+.input input {
+  padding: 14px;
+  border-radius: 20px;
+  border: 1px solid #aaa;
+  width: 60%;
+}
+.input input:focus {
+  border: 1px solid #aaa;
+  outline: none;
+}
+.input input::placeholder {
+  font-size: 11px;
+}
+.input p.mobile-error {
+  font-size: 11px;
+  color: red;
+  font-weight: 600;
+  padding-left: 20px;
+  margin-top: 5px;
+  display: none;
+}
+.input button {
+  width: 35%;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background: var(--primary-color);
+  font-weight: 600;
+  padding: 14px;
+  cursor: pointer;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+.input button:hover {
+  background: var(--light-blue-color);
+}
+.subscribeForm > p {
+  font-size: 11px;
+  color: red;
+  font-weight: 600;
+  padding-left: 20px;
+  margin-top: 5px;
+  display: none;
+}
+.dashboard {
+  max-width: 32%;
+  margin-bottom: 20px;
+}
+.socialIcon {
+  display: flex;
+  margin-bottom: 30px;
+}
+.socialIcon a {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: 0.3s all ease-in;
+  -webkit-transition: 0.3s all ease-in;
+  -moz-transition: 0.3s all ease-in;
+  -ms-transition: 0.3s all ease-in;
+  -o-transition: 0.3s all ease-in;
+}
+.socialIcon a:hover {
+  background: var(--primary-color);
+}
+.socialIcon a:hover i {
+  color: white;
+}
+.socialIcon i {
+  color: var(--primary-color);
+  font-size: 15px;
+  transition: 0.3s all ease-in;
+}
+.copyright {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  .subscribeForm {
+    width: 100%;
+  }
+  .subscribeForm p {
+    padding-left: 60px;
+  }
+  .input {
+    flex-direction: column;
+    align-items: center;
+  }
+  .input input {
+    padding: 10px;
+    width: 70%;
+    margin-bottom: 10px;
+  }
+  .input p.mobile-error {
+    display: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+  .input button {
+    padding: 10px;
+    width: 70%;
+  }
+  .dashboard {
+    max-width: 70%;
+    margin-bottom: 50px;
+  }
+}
